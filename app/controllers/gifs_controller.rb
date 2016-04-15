@@ -31,7 +31,7 @@ class GifsController < ApplicationController
   def show
     respond_to do |format|
       format.html { redirect_to :back }
-      format.js { render 'gif' }
+      format.js { render "gif" }
     end
   end
 
@@ -40,7 +40,7 @@ class GifsController < ApplicationController
     @gif.destroy
     respond_to do |format|
       format.html { redirect_to root_path, notice: 'Gif was successfully destroyed.' }
-      format.js { }
+      format.js {}
     end
   end
 
