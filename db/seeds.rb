@@ -11,5 +11,5 @@
 end
 
 1000.times do
-  Gif.create!(url: Giphy.trending.url, user_id: rand(1)
+  Gif.create!(url: Giphy.random('technology').image_url.to_s, user_id: rand(1..99))
 end
