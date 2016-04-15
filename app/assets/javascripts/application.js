@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+//= require jquery.turbolinks
+//= require bootstrap-sprockets
+//= require rails.validations
+//= require rails.validations.simple_form
+//= require_bootstrap.min
