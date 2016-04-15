@@ -8,7 +8,7 @@
 
 100.times do
   User.create!(
-    username: Faker::Name.first_name + "_" + Faker::Superhero.power.split()[0]
+    username: Faker::Name.first_name + "_" + Faker::Superhero.power.split()[0],
     email: Faker::Internet.safe_email, password: "password"
   )
 end
