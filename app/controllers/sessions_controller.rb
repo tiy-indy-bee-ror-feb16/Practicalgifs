@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
         flash[:success] = "Stay Nifty"
         redirect_to :root
       }
-      format.js { render :action => "new_modal" }
+      format.js { }
     end
   end
 end
