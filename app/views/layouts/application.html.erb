@@ -14,6 +14,6 @@
       <%#= render 'layouts/footer' %>
 
     </div>
-    <%= render partial: 'gifs/form', layout: 'gifs/modal', locals: {label: 'new_gif_form', title: 'New Gif'} %>
+    <%= render partial: 'gifs/form', layout: 'gifs/modal', locals: {label: 'new_gif_form', title: 'New Gif'} if current_user %>
   </body>
 </html>
