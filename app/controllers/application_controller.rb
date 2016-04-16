@@ -14,14 +14,14 @@ class ApplicationController < ActionController::Base
 
   def require_user
     unless current_user
-      flash[:danger] = "You need to login first."
+      flash.now[:danger] = "You need to login first."
       redirect_to :root
     end
   end
 
   def disallow_user
     if current_user
-      flash[:warning] = "You're already logged in."
+      flash.now[:warning] = "You're already logged in."
       redirect_to :root
     end
   end
