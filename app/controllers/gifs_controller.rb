@@ -13,7 +13,6 @@ class GifsController < ApplicationController
 
   def new
     @gif = current_user.gifs.new
-    @user = current_user
   end
 
   def create
