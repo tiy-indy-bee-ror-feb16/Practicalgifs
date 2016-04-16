@@ -1,0 +1,4 @@
+<%= simple_form_for @this_gif ||= Gif.new, validate: true, remote: true do |f| %>
+  <%= f.input :url, required: true, autofocus: true %>
+  <%= f.submit 'Add That Nifty Gif', class: "btn btn-default center-block" %>
+<% end %>

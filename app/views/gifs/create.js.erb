@@ -1,0 +1,5 @@
+$('#new_gif_form').modal('toggle')
+$('#new_gif')[0].reset()
+$('#gifs_list').prepend('<%=j render @gif %>')
+$('#gif_<%= @gif.id %>').effect('highlight', {}, 3000)
+$('#content').prepend('<%=j render "application/flashes", flash: {:success => "Thanks for the Gif!"} %>')

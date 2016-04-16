@@ -22,6 +22,7 @@ class GifsController < ApplicationController
     respond_to do |format|
       if @gif.save
         format.html { redirect_to root_path, notice: 'gif was successfully created.' }
+        format.js {}
       else
         format.html { render :new }
       end
