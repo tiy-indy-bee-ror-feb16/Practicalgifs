@@ -1,6 +1,0 @@
-  <% if current_user %>
-    <li id=login><%= link_to "Logout", logout_path, class: "btn btn-default" %></li>
-  <% else %>
-    <li id=login><%= link_to "Sign up", new_user_path, class: "btn btn-default" %></li>
-    <li id=login><%= link_to "Login", login_path, class: "btn btn-default" %></li>
-  <% end %>
