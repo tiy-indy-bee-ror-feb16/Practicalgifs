@@ -1,8 +1,3 @@
-<div class="row">
-  <div class="col-md-12 col-offset-3">
-    <%= simple_form_for @gif, url: user_gifs_path do |f| %>
-      <%= f.input :url, required: true, autofocus: true %>
-      <%= f.submit 'Add That Nifty Gif', class: "btn btn-default center-block" %>
-    <% end %>
-  </div>
-</div>
+<h1>Add a new Gif</h1>
+
+<%= render 'form' %>

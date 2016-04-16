@@ -1,7 +1,7 @@
 <ul class="nav navbar-nav navbar-right">
   <% if current_user %>
     <li id='logout'><%= link_to "Logout", logout_path, method: :delete, class: "btn btn-secondary" %></li>
-    <li id='new-gif-btn'><%= link_to "Submit Gif", new_user_gif_path(:id), class: "btn btn-secondary" %></li>
+    <li id='new-gif-btn'><%= link_to "Submit Gif", new_user_gif_path(:id), class: "btn btn-secondary", :data => {toggle: "modal", target: "#new_gif_form", remote: false} %></li>
   <% else %>
     <li id='login_modal'><%= link_to "Sign up", new_user_path, class: "btn btn-secondary", :data => {toggle: "modal", target: "#new_modal_form", remote: false} %></li>
     <li id='login'><%= link_to "Login", login_path, class: "btn btn-secondary" %></li>

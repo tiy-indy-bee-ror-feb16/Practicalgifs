@@ -13,7 +13,6 @@ class GifsController < ApplicationController
 
   def new
     @gif = current_user.gifs.new
-    @user = current_user
   end
 
   def create
@@ -22,6 +21,7 @@ class GifsController < ApplicationController
     respond_to do |format|
       if @gif.save
         format.html { redirect_to root_path, notice: 'gif was successfully created.' }
+        format.js {}
       else
         format.html { render :new }
       end
