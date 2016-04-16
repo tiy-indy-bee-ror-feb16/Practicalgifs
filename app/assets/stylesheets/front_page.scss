@@ -52,3 +52,30 @@ footer {
 code {
   font-size: 80%;
 }
+
+#login {
+  font-size: 30px;
+  transition: font-size .05s ease;
+
+  &:hover {
+  font-size: 15px !important;
+
+  }
+}
+
+nav ul li a {
+  transition: font-size .05s ease;
+
+  &:hover {
+  font-weight: bold;
+  font-color: #262626 !important;
+  }
+}
+
+body form label {
+  color: white !important;
+}
+
+body form label abbr {
+  color: red !important;
+}

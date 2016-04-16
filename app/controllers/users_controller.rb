@@ -12,7 +12,13 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_url
+      respond_to do |format|
+        format.html {
+        redirect_to root_url
+        flash[:success] = "You're ready to nifty your life!"
+        }
+        format.js { }
+      end
     else
       render :new
     end
