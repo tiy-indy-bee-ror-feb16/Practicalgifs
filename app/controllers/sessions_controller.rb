@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
           flash[:success] = "Welcome to Nifty Gifs!"
           redirect_to :root
         }
-        format.js { render :action => "new_modal" }
+        format.js { }
       end
     else
       flash[:danger] = "That email/password combination isn't Nifty"
