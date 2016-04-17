@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :require_user, only: [:new]
+  before_action :disallow_user, only: [:new, :create]
 
   def index
     @users = User.all
