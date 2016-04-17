@@ -15,6 +15,6 @@
 
     </div>
     <%= render partial: 'gifs/form', layout: 'gifs/modal',  locals: {label: 'new_gif_form', title: 'New Gif'} if current_user %>
-    <%= render partial: 'users/form', layout: 'users/modal', locals: {label: 'new_model_form', title: 'New User'}  %>
+    <%= render partial: 'users/form', layout: 'layouts/modal', locals: {label: 'new_model_form', title: 'New User'}  %>
   </body>
 </html>
