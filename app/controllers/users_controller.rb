@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :require_user, only: [:new]
 
   def index
     @users = User.all
