@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       respond_to do |format|
         format.html {
-          redirect_to :back,
+          redirect_to {@user}
           flash[:success] = "You're ready to nifty your life!"
         }
         format.js { }
