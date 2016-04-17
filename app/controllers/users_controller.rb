@@ -21,7 +21,7 @@ class UsersController < ApplicationController
         format.js { }
       end
     else
-      render :new
+      format.html { render :new }
     end
   end
 
