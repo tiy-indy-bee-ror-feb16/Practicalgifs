@@ -6,9 +6,14 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      flash[:success] = "Welcome to Nifty Gifs!"
       session[:user_id] = user.id
-      redirect_to :root
+      respond_to do |format|
+        format.html {
+          flash[:success] = "Welcome to Nifty Gifs!"
+          redirect_to :root
+        }
+        format.js { }
+      end
     else
       flash[:danger] = "That email/password combination isn't Nifty"
       render :new
@@ -17,7 +22,12 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    flash[:success] = "Stay Nifty"
-    redirect_to :root
+    respond_to do |format|
+      format.html {
+        flash[:success] = "Stay Nifty"
+        redirect_to :root
+      }
+      format.js { }
+    end
   end
 end

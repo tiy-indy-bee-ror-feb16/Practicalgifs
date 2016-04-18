@@ -7,13 +7,10 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <%= render 'layouts/header'%>
     <div class="container">
-
-      <%= render 'layouts/header'%>
       <%= yield %>
-      <%#= render 'layouts/footer' %>
-
     </div>
-    <%= render partial: 'gifs/form', layout: 'gifs/modal', locals: {label: 'new_gif_form', title: 'New Gif'} if current_user %>
+    <%= render partial: 'layouts/modal' %>
   </body>
 </html>
