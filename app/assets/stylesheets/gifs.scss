@@ -6,6 +6,11 @@
   width: 100%;
 }
 
+.gif-wrapper {
+  width: 100%;
+  padding-bottom: 75%;
+}
+
 .gif-box {
   height: 12vw;
   overflow: hidden;
@@ -16,4 +21,36 @@
   //   left: -50%;
   //   top: -50%;
   // }
+}
+
+.pagination {
+  color: #60DFE5;
+  margin-left: 1.5em;
+
+  li a {
+    color: #262626 !important;
+  }
+
+  .active a {
+    background-color: #60DFE5 !important;
+    border-color: #60DFE5 !important;
+    color: #fff !important;
+  }
+
+  .page a {
+    color: #60DFE5;
+  }
+
+  .gap a {
+    color: #60DFE5;
+  }
+
+  .next a {
+    color: #60DFE5;
+  }
+
+  .last a {
+    color: #60DFE5;
+  }
+
 }
