@@ -29,9 +29,11 @@ class GifsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:user_id])
+    @gif = Gif.find(params[:id])
     respond_to do |format|
-      format.html { redirect_to :back }
-      format.js { render "gif" }
+      format.html {}
+      format.js {}
     end
   end
 
