@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   resources :users, except: [:index] do
-    resources :gifs, except: [:index, :edit, :update]
+    resources :gifs, except: [:index, :edit, :update] do
+      resources :votes, only: [:create, :destroy]
+    end
   end
 
 

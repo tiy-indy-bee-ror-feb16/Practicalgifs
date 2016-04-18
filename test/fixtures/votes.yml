@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gif_id: 
+  user_id: 
+
+two:
+  gif_id: 
+  user_id: 
