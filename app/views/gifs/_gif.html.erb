@@ -12,7 +12,7 @@
         <img src="<%= gif.url %>" id="gif_<%= gif.id %>" class="gif img-responsive" data-toggle="modal" data-target="#gif_modal_<%= gif.id %>" alt="gif"/>
         <p><%=  gif.url %></p>
         <p>Posted at <%= gif.created_at.strftime("%I:%M%p") %> on <%= gif.created_at.to_date.to_s %></p> <%=  %>
-        <p>By <%= gif.user.username %></p>
+        <p>By <%= link_to gif.user.username, user_path(id: gif.user.id), remote:true %></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
