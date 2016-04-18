@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :disallow_user, only: [:new, :create]
 
   def index
     @users = User.all
@@ -12,9 +13,15 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_url
+      respond_to do |format|
+        format.html {
+          redirect_to {@user}
+          flash[:success] = "You're ready to nifty your life!"
+        }
+        format.js { }
+      end
     else
-      render :new
+      format.html { render :new }
     end
   end
 
