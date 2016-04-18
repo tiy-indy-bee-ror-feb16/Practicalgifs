@@ -1,0 +1,7 @@
+<% if current_user %>
+  <li id='logout'><%= link_to "Logout", logout_path, method: :delete, class: "btn btn-secondary", remote: true %></li>
+  <li id='new-gif-btn'><%= link_to "Submit Gif", new_user_gif_path(:id), class: "btn btn-secondary", :data => {toggle: "modal", target: "#main_modal", remote: true} %></li>
+<% else %>
+  <li id='login_modal'><%= link_to "Sign up", new_user_path, class: "btn btn-secondary", :data => {toggle: "modal", target: "#main_modal", remote: true} %></li>
+  <li id='login'><%= link_to "Login", login_path, class: "btn btn-secondary", :data => { toggle: "modal", target: "#main_modal", remote: true}  %></li>
+<% end %>
