@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-6 col-offset-3">
-    <%= simple_form_for :session, url: login_path do |f| %>
+    <%= simple_form_for :session, url: login_path, remote: true do |f| %>
       <%= f.input :email, autofocus: true %>
       <%= f.input :password %>
       <%= f.submit 'login', class: "btn btn-default" %>
