@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
           flash[:success] = "Welcome to Nifty Gifs!"
           redirect_to :root
         }
-        format.js { }
+        format.js {}
       end
     else
       flash[:danger] = "That email/password combination isn't Nifty"
@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
         flash[:success] = "Stay Nifty"
         redirect_to :root
       }
-      format.js { }
+      format.js {}
     end
   end
 end
