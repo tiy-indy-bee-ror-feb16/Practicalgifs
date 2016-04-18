@@ -5,18 +5,19 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:password])
-      session[:user_id] = user.id
-      respond_to do |format|
-        format.html {
-          flash[:success] = "Welcome to Nifty Gifs!"
-          redirect_to :root
-        }
-        format.js { }
+
+    respond_to do |format|
+      if user && user.authenticate(params[:session][:password])
+        session[:user_id] = user.id
+          format.html {
+            flash[:success] = "Welcome to Nifty Gifs!"
+            redirect_to :root
+          }
+          format.js {}
+      else
+        flash[:danger] = "That email/password combination isn't Nifty"
+        format.html { render :new }
       end
-    else
-      flash[:danger] = "That email/password combination isn't Nifty"
-      render :new
     end
   end
 
@@ -27,7 +28,7 @@ class SessionsController < ApplicationController
         flash[:success] = "Stay Nifty"
         redirect_to :root
       }
-      format.js { }
+      format.js {}
     end
   end
 end
