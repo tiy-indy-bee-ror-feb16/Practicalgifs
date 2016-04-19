@@ -1,5 +1,5 @@
 <div class="gif_wrapper">
   <div class="gif-box col-md-3 col-sm-4 col-xs-6">
-    <%= link_to (image_tag gif.url, id: gif.id, class: "gif img-responsive", alt: "gif"), user_gif_path(user_id: current_user, id: gif.id), :data => {toggle: "modal", target: "#main_modal", remote: true} %>
+    <%= link_to (image_tag gif.url, id: gif.id, class: "gif img-responsive", alt: "gif"), user_gif_path(user_id: current_user || 100000, id: gif.id), :data => {toggle: "modal", target: "#main_modal", remote: true} %>
   </div>
 </div>
