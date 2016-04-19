@@ -53,7 +53,7 @@ class GifsController < ApplicationController
   end
 
   def gif_params
-    params.require(:gif).permit(:url)
+    params.require(:gif).permit(:gif_image, :url)
   end
 
 end
