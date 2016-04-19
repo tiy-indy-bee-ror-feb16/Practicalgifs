@@ -1,6 +1,7 @@
 class Gif < ActiveRecord::Base
   belongs_to :user
   has_many :votes
+  attachment :gif_image
 
   validates :url, presence: true,
                   format: { with: URI.regexp, message: 'must be a valid URL like http://media.giphy.com/media/tlpVdqCrewXFC/giphy.gif'}, if: Proc.new { |a| a.url.present? }
