@@ -2,6 +2,9 @@
 
 <button type="button" class="btn btn-default" data-dismiss="modal">
   <% if current_user %>
+    <% if true %>
     <%= link_to "UpNift", user_gif_votes_path(current_user, @gif), method: :post, remote: true  %>
+    <% else %>
+  <% end %>
   <% end %>
 </button>
