@@ -17,14 +17,13 @@ class GifsController < ApplicationController
 
   def create
     @gif = current_user.gifs.create(gif_params)
-
     respond_to do |format|
       if @gif.save
         format.html { redirect_to root_path, notice: 'gif was successfully created.' }
         format.js {}
       else
         format.html { render :new }
-        format.js { render :new }
+        format.js {}
       end
     end
   end
