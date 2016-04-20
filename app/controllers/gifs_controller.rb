@@ -24,6 +24,7 @@ class GifsController < ApplicationController
         format.js {}
       else
         format.html { render :new }
+        format.js { render :new }
       end
     end
   end
