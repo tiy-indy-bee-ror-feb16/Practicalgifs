@@ -1,7 +1,7 @@
 <h4 id="niftiness_lvl">Niftiness: <%= @gif.votes.count %></h4>
 
-<button type="button" class="btn btn-default" data-dismiss="modal">
-  <% if current_user %>
-    <%= link_to "UpNift", user_gif_votes_path(current_user, @gif), method: :post, remote: true  %>
-  <% end %>
-</button>
+<% if current_user %>
+  <button type="button" class="btn btn-default" data-dismiss="modal">
+      <%= link_to "UpNift", user_gif_votes_path(current_user, @gif), method: :post, remote: true %>
+  </button>
+<% end %>

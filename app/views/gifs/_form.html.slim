@@ -1,0 +1,4 @@
+= simple_form_for @gif, url: user_gifs_path(current_user), remote: false do |f|
+  = f.input :url, label: "Paste gif url, and or upload below", required: true, autofocus: true
+  = f.attachment_field :gif_image
+  = f.submit 'Add That Nifty Gif', class: "btn btn-default center-block"

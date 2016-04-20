@@ -1,5 +1,5 @@
-<img src="<%= @gif.url %>" id="<%= @gif.id %>" class="gif" alt="gif"/>
-<p><%=  @gif.url %></p>
+<img src="<%= @gif.gif_display_url %>" id="<%= @gif.id %>" class="gif" alt="gif"/>
+<p><%=  @gif.gif_display_url %></p>
 <p>Posted by <%= link_to @gif.user.username, user_path(id: @gif.user.id), remote:true %> on <%= @gif.created_at.to_date.to_s %> at <%= @gif.created_at.strftime("%I:%M%p") %></p>
 
 <div class="" id="niftiness_box_wrapper">

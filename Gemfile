@@ -30,7 +30,11 @@ gem 'jquery-turbolinks'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
 gem 'giphy'
+gem "slim-rails"
 gem 'rails_12factor', group: :production
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
+gem 'refile-postgres'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
