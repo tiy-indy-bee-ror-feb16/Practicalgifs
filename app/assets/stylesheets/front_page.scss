@@ -1,0 +1,81 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: #262626 !important;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  > .container {
+    padding: 60px 15px 0;
+  }
+}
+
+nav {
+  background-color: #60DFE5 !important;
+  width: 100%;
+  padding: 0px;
+  position: relative;
+  .navbar-brand {
+    font-size: 30px !important;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+  }
+  // #login, #logout {
+  //   background-color: gray;
+  //   text-decoration-color: white !important;
+  // }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+  > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+code {
+  font-size: 80%;
+}
+
+#login {
+  font-size: 30px;
+  transition: font-size .05s ease;
+
+  &:hover {
+  font-size: 15px !important;
+
+  }
+}
+
+nav ul li a {
+  transition: font-size .05s ease;
+
+  &:hover {
+  font-weight: bold;
+  font-color: #262626 !important;
+  }
+}
+
+body form label {
+  color: black !important;
+}
+
+body form label abbr {
+  color: red !important;
+}
